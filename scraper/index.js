@@ -12,6 +12,7 @@ function scrape() {
 }
 
 function retrieve(url) {
+  var id = url.split(".")[1];
   return new Promise(function(resolve,reject){
     var stockData = {};
     
@@ -29,7 +30,7 @@ function retrieve(url) {
       .then(function(data) {
         stockData["price"] = data.text().split(' ')[1];
       })
-      .get("http://www.tijd.be/ajax/historyPeriod?issueId=60115403")
+      .get("http://www.tijd.be/ajax/historyPeriod?issueId="+id)
       .find("table")
       .then(function(data) {
         var table = data.text().split("    ");
