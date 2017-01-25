@@ -1,5 +1,7 @@
-var express = require('express')
-var app = express()
+"use strict";
+
+var express = require('express');
+var app = express();
 
 var scraper = require('./scraper');
 
