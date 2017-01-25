@@ -1,10 +1,13 @@
 var osmosis = require('osmosis');
 
 var stocks = [
-  "AB_InBev.60128205",
-  "Bekaert.60115401",
-  "Engie.360194010",
-  "Colruyt.60115403"
+  "BEL_20.190015497",
+  "Aedifica.60191978",
+  "NY_Nasdaq_100.350112197",
+  "Unilever.11962",
+  "Zalando_SE.480015241",
+  "Coca_Cola.330016321",
+  "Facebook.350002220"  
 ];
 
 function scrape() {
