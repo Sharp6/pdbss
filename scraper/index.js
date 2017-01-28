@@ -1,9 +1,9 @@
 var osmosis = require('osmosis');
 
 var stocks = [
-  "BEL_20.190015497",
+  "Lyxor_UCITS_ETF_BEL_20_TR.60168051",
   "Aedifica.60191978",
-  "NY_Nasdaq_100.350112197",
+  "Lyxor_Nasdaq_100_UCITS_ETF.360178232",
   "Unilever.11962",
   "Zalando_SE.480015241",
   "Coca_Cola.330016321",
