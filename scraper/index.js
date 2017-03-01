@@ -7,7 +7,8 @@ var stocks = [
   "Unilever.11962",
   "Zalando_SE.480015241",
   "Coca_Cola.330016321",
-  "Facebook.350002220"  
+  "Facebook.350002220",
+  "Tesla_Motors_Inc.350000520"
 ];
 
 function scrape() {
