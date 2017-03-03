@@ -5,6 +5,17 @@ var app = express();
 
 var scraper = require('./scraper');
 
+var recoveringScraper = function() {
+    return scaper()
+      .then(function(data) {
+        if(data) {
+          return data;
+        } else {
+          return recoveringScraper();
+        }
+      });
+}
+
 app.get('/', function (req, res) {
   scraper()
     .then(function(data) {
