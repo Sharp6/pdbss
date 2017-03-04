@@ -9,7 +9,6 @@ var checkIfOk = function(something) {
   return something.reduce(function(allHistory, stock) {
     return allHistory && stock.history.length > 0;
   }, true);
-  return false;
 }
 
 var recoveringScraper = function(counter) {
