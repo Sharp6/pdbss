@@ -4,24 +4,28 @@ var express = require('express');
 var app = express();
 
 var scraper = require('./scraper');
-var counter = 0;
 
 var checkIfOk = function(something) {
   return something.reduce(function(allHistory, stock) {
     return allHistory && stock.history.length > 0;
   }, true);
+  return false;
 }
 
-var recoveringScraper = function() {
-  console.log("Executing", counter++);
+var recoveringScraper = function(counter) {
+  console.log("Executing", counter--);
+  if(counter > 0) {
     return scraper()
       .then(function(data) {
         if(checkIfOk(data)) {
           return data;
         } else {
-          return recoveringScraper();
+          return recoveringScraper(counter);
         }
       });
+  } else {
+    return [];
+  }
 }
 
 app.get('/', function (req, res) {
@@ -32,7 +36,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/withRecover', function(req,res) {
-  recoveringScraper()
+  recoveringScraper(5)
     .then(function(data) {
       res.json(data);
     });
