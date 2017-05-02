@@ -8,7 +8,9 @@ var stocks = [
   "Zalando_SE.480015241",
   "Coca_Cola.330016321",
   "Facebook.350002220",
-  "Tesla_Motors_Inc.350000520"
+  "Tesla_Motors_Inc.350000520",
+  "Johnson_Johnson.330016302",
+  "Ahold_Delhaize_Koninklijke.11755"
 ];
 
 function scrape() {
